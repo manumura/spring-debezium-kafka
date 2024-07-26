@@ -1,0 +1,11 @@
+CREATE TABLE IF NOT EXISTS accounts (
+    id BIGINT PRIMARY KEY GENERATED ALWAYS AS IDENTITY,
+    uuid VARCHAR(36) NOT NULL,
+    name VARCHAR(255) NOT NULL,
+    balance DECIMAL(15, 2) NOT NULL,
+    created_at TIMESTAMP NOT NULL,
+    updated_at TIMESTAMP NOT NULL,
+    version BIGINT NOT NULL
+);
+
+CREATE UNIQUE INDEX IF NOT EXISTS accounts_idx_uuid on accounts (uuid);
