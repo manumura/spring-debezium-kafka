@@ -1,4 +1,4 @@
-package com.example.demo.account.api.dto;
+package com.example.demo.account.api.model;
 
 import org.apache.commons.lang3.StringUtils;
 

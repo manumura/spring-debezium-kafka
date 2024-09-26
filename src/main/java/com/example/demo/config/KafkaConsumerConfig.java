@@ -1,8 +1,6 @@
 package com.example.demo.config;
 
-import com.example.demo.account.listener.AccountChangeEvent;
-import com.fasterxml.jackson.databind.DeserializationFeature;
-import com.fasterxml.jackson.databind.ObjectMapper;
+import com.example.demo.account.listener.model.AccountChangeEvent;
 import org.apache.kafka.clients.consumer.ConsumerConfig;
 import org.apache.kafka.common.serialization.StringDeserializer;
 import org.springframework.beans.factory.annotation.Value;

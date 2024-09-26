@@ -1,6 +1,6 @@
-package com.example.demo.account.listener;
+package com.example.demo.account.listener.model;
 
-import com.example.demo.account.api.AccountEntity;
+import com.example.demo.account.api.persistence.AccountEntity;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 public record AccountChangeEventPayload(

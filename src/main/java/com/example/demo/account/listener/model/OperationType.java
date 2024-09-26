@@ -1,4 +1,4 @@
-package com.example.demo.account.listener;
+package com.example.demo.account.listener.model;
 
 public enum OperationType {
 

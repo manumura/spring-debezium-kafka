@@ -1,6 +1,8 @@
 package com.example.demo.account.listener;
 
-import com.example.demo.account.api.AccountService;
+import com.example.demo.account.listener.model.AccountChangeEvent;
+import com.example.demo.account.listener.model.OperationType;
+import com.example.demo.account.listener.service.AccountCacheService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.kafka.annotation.KafkaListener;
@@ -12,11 +14,9 @@ public class AccountChangeListener {
 
     private static final Logger log = LoggerFactory.getLogger(AccountChangeListener.class);
 
-    private final AccountService accountService;
     private final AccountCacheService accountCacheService;
 
-    public AccountChangeListener(AccountService accountService, AccountCacheService accountCacheService) {
-        this.accountService = accountService;
+    public AccountChangeListener(AccountCacheService accountCacheService) {
         this.accountCacheService = accountCacheService;
     }
 
@@ -42,6 +42,7 @@ public class AccountChangeListener {
                 // Delete event returns only ID of the entity
             } else{
                 // do nothing
+                log.info("--- Unknown event --- {}", event.payload());
             }
         } catch (Exception e) {
             log.error(e.getMessage());

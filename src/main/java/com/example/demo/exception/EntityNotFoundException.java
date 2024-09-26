@@ -1,4 +1,4 @@
-package com.example.demo.account.api.exception;
+package com.example.demo.exception;
 
 public class EntityNotFoundException extends RuntimeException {
     public EntityNotFoundException(String message) {

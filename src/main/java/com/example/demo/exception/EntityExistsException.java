@@ -1,4 +1,4 @@
-package com.example.demo.account.api.exception;
+package com.example.demo.exception;
 
 public class EntityExistsException extends RuntimeException {
     public EntityExistsException(String message) {

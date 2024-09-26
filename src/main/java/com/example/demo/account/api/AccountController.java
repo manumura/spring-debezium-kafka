@@ -1,7 +1,9 @@
 package com.example.demo.account.api;
 
-import com.example.demo.account.api.dto.CreateAccountRequest;
-import com.example.demo.account.api.dto.UpdateAccountBalanceRequest;
+import com.example.demo.account.api.model.CreateAccountRequest;
+import com.example.demo.account.api.model.UpdateAccountBalanceRequest;
+import com.example.demo.account.api.model.Account;
+import com.example.demo.account.api.service.AccountService;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
